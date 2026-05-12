@@ -97,4 +97,5 @@ CV-Project4/Part1/figures/
 ```
 
 Examples of visualization:
-
+![Comparison between initialization under Wavelet-GS optimization](images/02_init_compare_wavelet.png)
+![Per-view comparison of Re10k-1 dataset under different optimization](images/re10k1_colmap_per_view_3dgs_vs_wavelet.png)
