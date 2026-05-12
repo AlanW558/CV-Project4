@@ -28,21 +28,6 @@ The detailed environment configuration methods should follow the instructions in
 * [VGGT](https://github.com/facebookresearch/vggt)
 * [Wavelet-GS](https://github.com/ALEX5874/Wavelet-GS.git)
 
-### Data Preparation
-
-Create a `datasets` folder under the project directory:
-
-```bash
-mkdir datasets
-```
-
-The required datasets can be downloaded from the following links:
-
-* [Google Drive](https://drive.google.com/drive/folders/1euG7pnbFowljVWoNLcbCmil81IVsIEfM)
-* [Baidu Netdisk](https://pan.baidu.com/s/1Sa18zCeYiYA2gWAllo11dg?pwd=p3bm#list/path=%2F)
-
-After downloading the datasets, place them into the `datasets` folder.
-
 ### Code Usage
 
 When using VGGT, if the GPU memory is insufficient, you can uniformly sample the original datasets into subsampled datasets:
