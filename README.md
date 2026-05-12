@@ -54,24 +54,6 @@ After downloading the datasets, place them into the `datasets` folder.
 
 ### Code Usage
 
-After finishing the environment configuration and data preparation, run the corresponding scripts for Part 1.
-
-Before running the code, make sure the external repositories and datasets are correctly prepared.
-
-### Other Notes
-
-Part 1 depends on COLMAP, 3D Gaussian Splatting, VGGT, and Wavelet-GS. Please refer to the official repositories for detailed installation instructions, dependency requirements, and additional usage notes.
-
-## Part 2
-
-### Environment Configuration
-
-Configure the environment required for Part 2 according to the dependencies used in this part.
-
-Make sure all required packages, datasets, and external resources are prepared before running the Part 2 code.
-
-### Code Usage
-
 When using VGGT, if the GPU memory is insufficient, you can uniformly sample the original datasets into subsampled datasets:
 
 ```bash
@@ -137,6 +119,17 @@ The visualizations will be saved to:
 ```bash
 CV-Project4/Part1/figures/
 ```
+### Other Notes
+
+Part 1 depends on COLMAP, 3D Gaussian Splatting, VGGT, and Wavelet-GS. Please refer to the official repositories for detailed installation instructions, dependency requirements, and additional usage notes.
+
+## Part 2
+
+### Environment Configuration
+
+Configure the environment required for Part 2 according to the dependencies used in this part.
+
+Make sure all required packages, datasets, and external resources are prepared before running the Part 2 code.
 
 ### Other Notes
 
