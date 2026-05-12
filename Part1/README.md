@@ -95,6 +95,6 @@ The visualizations will be saved to:
 ```bash
 CV-Project4/Part1/figures/
 ```
-### Other Notes
 
-Part 1 depends on COLMAP, 3D Gaussian Splatting, VGGT, and Wavelet-GS. Please refer to the official repositories for detailed installation instructions, dependency requirements, and additional usage notes.
+Examples of visualization:
+
