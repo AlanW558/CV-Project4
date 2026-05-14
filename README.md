@@ -12,9 +12,9 @@ This repository contains the implementation and experiments for **Project 4: Gen
 
 ## Abstract
 
-This project investigates sparse-view 3D reconstruction under increasingly challenging settings. First, COLMAP and VGGT are compared as initialization methods under 3DGS and Wavelet-GS optimization. Second, S3PO-GS is used for sparse-keyframe monocular 3DGS-SLAM, where full-frame tracking is preserved but mapping uses sparse keyframes. Third, a BRPO-inspired pseudo-view pipeline is introduced, using bidirectional Difix3D+ refinement, reprojection-based fusion, confidence masking, and masked RGB-D optimization.
+> This project investigates sparse-view 3D reconstruction under increasingly challenging settings. First, COLMAP and VGGT are compared as initialization methods under 3DGS and Wavelet-GS optimization. Second, S3PO-GS is used for sparse-keyframe monocular 3DGS-SLAM, where full-frame tracking is preserved but mapping uses sparse keyframes. Third, a BRPO-inspired pseudo-view pipeline is introduced, using bidirectional Difix3D+ refinement, reprojection-based fusion, confidence masking, and masked RGB-D optimization.
 
-The experiments show that COLMAP provides stronger initialization when reliable correspondences are available, while Wavelet-GS improves performance under stable COLMAP initialization. In sparse-keyframe SLAM, color refinement improves rendering quality but outdoor scenes still suffer from scale drift and map collapse. Pseudo-view optimization improves DL3DV-2 rendering and pose estimation, but its benefit is limited when pseudo-view reliability is affected by scale drift or when the sparse-only baseline is already strong.
+> The experiments show that COLMAP provides stronger initialization when reliable correspondences are available, while Wavelet-GS improves performance under stable COLMAP initialization. In sparse-keyframe SLAM, color refinement improves rendering quality but outdoor scenes still suffer from scale drift and map collapse. Pseudo-view optimization improves DL3DV-2 rendering and pose estimation, but its benefit is limited when pseudo-view reliability is affected by scale drift or when the sparse-only baseline is already strong.
 
 ---
 
