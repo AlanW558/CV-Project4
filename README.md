@@ -204,16 +204,6 @@ Additional observations:
   <b>Final ATE trajectory visualization.</b> The three figures correspond to Waymo-405841, DL3DV-2, and Re10k-1.
 </p>
 
-<p align="center">
-  <img src="fig/waymo.png" width="31%">
-  <img src="fig/dl3.png" width="31%">
-  <img src="fig/re.png" width="31%">
-</p>
-
-<p align="center">
-  <b>Representative rendering visualizations.</b> These examples summarize reconstruction behavior across the three datasets.
-</p>
-
 ---
 
 ### Part 3 Results
@@ -258,13 +248,23 @@ The reprojection overlap score is the most critical component. Without it, confi
 
 <p align="center">
   <img src="fig/00000_00010_a0.50_mask_overlay.png" width="48%">
-  <img src="fig/00000_00030_a0.25_mask_overlay.png" width="48%">
+  <img src="fig/00000_00030_a0.50_mask_overlay.png" width="48%">
+  <img src="fig/github_used.png" width="48%">
 </p>
 
 <p align="center">
   <b>Confidence mask overlay examples.</b> Green regions indicate pseudo-view areas considered reliable for confidence-guided optimization.
 </p>
 
+<p align="center">
+  <img src="fig/waymo.png" width="31%">
+  <img src="fig/dl3.png" width="31%">
+  <img src="fig/re.png" width="31%">
+</p>
+
+<p align="center">
+  <b>Representative rendering visualizations.</b> These examples summarize pose estimation after pseudo-view refinement.
+</p>
 ---
 
 ## Conclusion
