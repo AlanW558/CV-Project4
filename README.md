@@ -5,6 +5,11 @@
   AIAA 3201—Introduction to Computer Vision &nbsp;|&nbsp; Final Project, Spring 2026
 </p>
 
+<p align="center">
+  <video src="fig/part2.mp4" width="48%" autoplay loop muted playsinline controls></video>
+  <video src="fig/part3.mp4" width="48%" autoplay loop muted playsinline controls></video>
+</p>
+
 This repository contains the implementation and experiments for **Project 4: Generative Sparse-View 3D Reconstruction**. The project studies sparse-view 3D reconstruction through three stages:
 
 1. Dense-view initialization and Gaussian optimization.
