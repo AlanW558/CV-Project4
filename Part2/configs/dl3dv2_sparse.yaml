@@ -21,7 +21,7 @@ Dataset:
     distorted: False
 
 Results:
-  save_dir: "~/CV-Project4/Part2/results/"
+  save_dir: "~/CV-Project4/Part2/results/dl3dv2"
   color_refinement: True
 
 opt_params:
