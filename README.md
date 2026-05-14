@@ -247,9 +247,9 @@ The reprojection overlap score is the most critical component. Without it, confi
 #### Part 3 Visualization
 
 <p align="center">
-  <img src="fig/00000_00010_a0.50_mask_overlay.png" width="48%">
-  <img src="fig/00000_00030_a0.50_mask_overlay.png" width="48%">
-  <img src="fig/github_used.png" width="48%">
+  <img src="fig/00000_00010_a0.50_mask_overlay.png" width="32%">
+  <img src="fig/00000_00030_a0.50_mask_overlay.png" width="32%">
+  <img src="fig/github_used.png" width="32%">
 </p>
 
 <p align="center">
