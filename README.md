@@ -1,4 +1,5 @@
-# CV-Project4
+# Project4: Generative Sparse-View 3DReconstruction
+### AIAA 3201—Introduction to Computer Vision
 
 ### Data Preparation
 
