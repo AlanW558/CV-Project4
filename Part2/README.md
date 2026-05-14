@@ -82,4 +82,4 @@ CV-Project4/Part2/results/fig/part2_pipeline_refinement_comparison.png
 
 Example visualization:
 
-![Part 2 color refinement comparison](results/fig/part2_pipeline_refinement_comparison.png)
+![Part 2 color refinement comparison](fig/part2_pipeline_refinement_comparison.png)
