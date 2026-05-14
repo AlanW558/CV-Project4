@@ -3,11 +3,11 @@
 # Pixel intrinsics derived from normalized values (fx=0.8573, fy=0.8575, cx=cy=0.5)
 # multiplied by image width/height (256).
 
-inherit_from: "/data/yywong558/CV_PROJECT/S3PO-GS/configs/mono/dl3dv/base_config.yaml"
+inherit_from: "~CV-Project4/S3PO-GS/configs/mono/dl3dv/base_config.yaml"
 
 Dataset:
   type: 'dl3dv'
-  dataset_path: "/data/yywong558/CV_PROJECT/datasets/Re10k-1"
+  dataset_path: "~CV-Project4/datasets/Re10k-1"
   begin: 0
   end: -1
   Calibration:
@@ -26,7 +26,7 @@ Dataset:
     distorted: False
 
 Results:
-  save_dir: "/data/yywong558/CV_PROJECT/part2/results/Re10k-1/pipeline_refinement"
+  save_dir: "~CV-Project4/Part2/results/"
   color_refinement: True
 
 opt_params:
