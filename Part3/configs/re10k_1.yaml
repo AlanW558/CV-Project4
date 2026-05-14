@@ -1,0 +1,83 @@
+# Re10k-1 uses the same dl3dv dataset parser (same cameras.json schema).
+# Images (256x256) are symlinked into rgb/ by prepare_sparse.py.
+# Pixel intrinsics derived from normalized values (fx=0.8573, fy=0.8575, cx=cy=0.5)
+# multiplied by image width/height (256).
+
+inherit_from: "~CV-Project4/BRPO/configs/mono/dl3dv/base_config.yaml"
+
+Dataset:
+  type: 'dl3dv'
+  dataset_path: "~CV-Project4/datasets/Re10k-1"
+  begin: 0
+  end: -1
+  Calibration:
+    fx: 219.461
+    fy: 219.516
+    cx: 128.0
+    cy: 128.0
+    k1: 0.0
+    k2: 0.0
+    p1: 0.0
+    p2: 0.0
+    k3: 0.0
+    width: 256
+    height: 256
+    depth_scale: 200.0
+    distorted: False
+
+Results:
+  save_dir: "~CV-Project4/results/Re10k-1/"
+  color_refinement: True
+
+opt_params:
+  position_lr_init: 0.0016
+  position_lr_final: 0.0000016
+  init_lr: 6
+
+Training:
+  mapping_itr_nosingle: 10
+  kf_interval: 30
+
+  # Pseudo-view pose / coarse render
+  pseudo_views_per_pair: 3
+  pseudo_min_valid_ratio: 0.005
+
+  # Difix3D / bidirectional restoration
+  pseudo_refine_iters: 3
+  difix_height: 512
+  difix_width: 512
+  difix_prompt: "preserve color and geometry"
+  difix_timestep: 120
+
+  # Looser overlap fusion / confidence filtering
+  pseudo_use_reprojection: true
+  pseudo_reproj_depth_tol: 0.35
+  pseudo_corr_threshold: 0.02
+  pseudo_overlap_threshold: 0.02
+  pseudo_match_size: 512
+  pseudo_match_subsample: 4
+  pseudo_match_radius: 3
+  pseudo_opacity_threshold: 0.20
+
+  # Backend pseudo optimization: looser mask, but safer optimization
+  pseudo_pose_stabilize_iters: 3
+  pseudo_joint_iters: 5
+
+  optimize_pseudo_pose: true
+  optimize_pseudo_exposure: true
+
+  pseudo_pose_lr_rot: 0.00001
+  pseudo_pose_lr_trans: 0.00001
+  pseudo_exposure_lr_a: 0.0005
+  pseudo_exposure_lr_b: 0.0005
+
+  lambda_pseudo: 0.0005
+  pseudo_rgbd_beta: 0.98
+  pseudo_depth_decay: 1.0
+  lambda_pseudo_scale: 0.001
+
+  lambda_pseudo_pose_reg: 0.05
+  pseudo_pose_max_rot_delta: 0.0001
+  pseudo_pose_max_trans_delta: 0.0001
+
+  pseudo_use_lowfreq_align: false
