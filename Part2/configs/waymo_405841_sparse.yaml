@@ -1,7 +1,7 @@
-inherit_from: "/data/yywong558/CV_PROJECT/S3PO-GS/configs/mono/waymo/base_config.yaml"
+inherit_from: "~CV-Project4/S3PO-GS/configs/mono/waymo/base_config.yaml"
 
 Dataset:
-  dataset_path: "/data/yywong558/CV_PROJECT/datasets/405841/FRONT"
+  dataset_path: "~CV-Project4/datasets/405841/FRONT"
   Calibration:
     fx: 2066.697564417299
     fy: 2066.697564417299
@@ -18,7 +18,7 @@ Dataset:
     distorted: True
 
 Results:
-  save_dir: "/data/yywong558/CV_PROJECT/part2/results/405841/pipeline_refinement"
+  save_dir: "~CV-Project4/Part2/results/"
   color_refinement: True
 
 opt_params:
