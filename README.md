@@ -1,6 +1,9 @@
-# Project4: Generative Sparse-View 3D Reconstruction
+<h1 align="center">Project4: Generative Sparse-View 3D Reconstruction</h1>
 
-### AIAA 3201—Introduction to Computer Vision
+<p align="center">
+  <b>Enji Xiong</b> &nbsp;·&nbsp; <b>Yuk Yeung Wong</b> <br/>
+  AIAA 3201—Introduction to Computer Vision &nbsp;|&nbsp; Final Project, Spring 2026
+</p>
 
 This repository contains the implementation and experiments for **Project 4: Generative Sparse-View 3D Reconstruction**. The project studies sparse-view 3D reconstruction through three stages:
 
