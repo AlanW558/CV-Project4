@@ -1,4 +1,4 @@
-inherit_from: "/data/yywong558/CV_PROJECT/S3PO-GS/configs/mono/dl3dv/base_config.yaml"
+inherit_from: "~/CV-Project4/S3PO-GS/configs/mono/dl3dv/base_config.yaml"
 
 Dataset:
   type: 'dl3dv'
@@ -21,7 +21,7 @@ Dataset:
     distorted: False
 
 Results:
-  save_dir: "/data/yywong558/CV_PROJECT/part2/results/DL3DV-2/pipeline_refinement"
+  save_dir: "~/CV-Project4/Part2/results/"
   color_refinement: True
 
 opt_params:
