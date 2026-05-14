@@ -140,7 +140,7 @@ Main observations:
 - Full-frame COLMAP+3DGS performs better than 96-frame COLMAP+3DGS, showing that sparse frame sampling weakens SfM initialization.
 - On Waymo-405841 with 96 frames, COLMAP+3DGS fails due to abnormally sparse or nearly invisible initialized Gaussians.
 
-Representative Part 1 trends:
+Representative trends:
 
 | Comparison | Observation |
 |---|---|
@@ -148,6 +148,26 @@ Representative Part 1 trends:
 | 3DGS vs. Wavelet-GS | Wavelet-GS benefits more from stable COLMAP initialization. |
 | Full frames vs. 96 frames | Full-frame training gives better 3DGS results. |
 | Waymo-405841 96-frame COLMAP+3DGS | Training fails due to weak initialization and sparse visible Gaussians. |
+
+#### Part 1 Visualization
+
+<p align="center">
+  <img src="fig/01_init_compare_3dgs.png" width="48%">
+  <img src="fig/02_init_compare_wavelet.png" width="48%">
+</p>
+
+<p align="center">
+  <b>Initialization comparison.</b> COLMAP and VGGT are compared under 3DGS and Wavelet-GS optimization.
+</p>
+
+<p align="center">
+  <img src="fig/03_optimizer_compare_colmap.png" width="48%">
+  <img src="fig/04_optimizer_compare_vggt.png" width="48%">
+</p>
+
+<p align="center">
+  <b>Optimization comparison.</b> 3DGS and Wavelet-GS are compared under fixed COLMAP and VGGT initialization.
+</p>
 
 ---
 
@@ -171,6 +191,28 @@ Additional observations:
 - Waymo-405841 shows clear scale drift in ATE evaluation.
 - DL3DV-2 shows local map collapse in rendered RGB, depth, and residual maps.
 - These failures motivate the pseudo-view constraints introduced in Part 3.
+
+#### Part 2 Visualization
+
+<p align="center">
+  <img src="fig/evo_2dplot_final_waymo.png" width="31%">
+  <img src="fig/evo_2dplot_final_dl3dv2.png" width="31%">
+  <img src="fig/evo_2dplot_final_re.png" width="31%">
+</p>
+
+<p align="center">
+  <b>Final ATE trajectory visualization.</b> The three figures correspond to Waymo-405841, DL3DV-2, and Re10k-1.
+</p>
+
+<p align="center">
+  <img src="fig/waymo.png" width="31%">
+  <img src="fig/dl3.png" width="31%">
+  <img src="fig/re.png" width="31%">
+</p>
+
+<p align="center">
+  <b>Representative rendering visualizations.</b> These examples summarize reconstruction behavior across the three datasets.
+</p>
 
 ---
 
@@ -212,6 +254,17 @@ Ablation on DL3DV-2 shows that all pseudo-view components contribute to the fina
 
 The reprojection overlap score is the most critical component. Without it, confidence masks become overly permissive and allow unreliable pseudo-view regions to affect Gaussian optimization.
 
+#### Part 3 Visualization
+
+<p align="center">
+  <img src="fig/00000_00010_a0.50_mask_overlay.png" width="48%">
+  <img src="fig/00000_00030_a0.25_mask_overlay.png" width="48%">
+</p>
+
+<p align="center">
+  <b>Confidence mask overlay examples.</b> Green regions indicate pseudo-view areas considered reliable for confidence-guided optimization.
+</p>
+
 ---
 
 ## Conclusion
@@ -249,3 +302,37 @@ The required datasets can be downloaded from the following links:
 After downloading the datasets, place them into the `datasets` folder.
 
 For more specific reproduction instructions, please refer to the `README.md` file inside each part folder.
+
+---
+
+## References
+
+- **COLMAP / SfM**
+  - Agarwal et al. *Building Rome in a Day*. Communications of the ACM, 2011.
+
+- **3D Gaussian Splatting**
+  - Kerbl et al. *3D Gaussian Splatting for Real-Time Radiance Field Rendering*. SIGGRAPH, 2023.
+  - Lu et al. *Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering*. CVPR, 2024.
+  - Zhang et al. *Wavelet-GS: Wavelet Gaussian Splatting for Efficient and High-Fidelity Novel View Synthesis*. 2024.
+
+- **3D Foundation Models and Sparse-view Reconstruction**
+  - Wang et al. *DUSt3R: Geometric 3D Vision Made Easy*. CVPR, 2024.
+  - Wang et al. *VGGT: Visual Geometry Grounded Transformer*. 2025.
+  - Yang et al. *Pi3: Scalable Permutation-Equivariant Visual Geometry Learning*. 2025.
+  - Liu et al. *MapAnything: Universal Feed-Forward Metric 3D Reconstruction*. 2025.
+  - Fan et al. *InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds*. 2024.
+  - Chen et al. *RegGS: Unposed Sparse Views 3D Gaussian Splatting via 3DGS Registration*. 2024.
+
+- **Monocular 3DGS-SLAM**
+  - Xiong et al. *S3PO-GS: Scale-Consistent 3D Gaussian Splatting for RGB-only SLAM in Unbounded Outdoor Scenes*. 2025.
+  - Mao et al. *Artdeco: Efficient 3D Scene Representation via 2D Image Features*. 2025.
+
+- **Pseudo-view Generation and Diffusion Enhancement**
+  - Zhang et al. *BRPO: Bringing Realistic Pseudo-Observations to Unposed Sparse-View 3D Gaussian Splatting*. 2025.
+  - Ma et al. *ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model*. 2025.
+  - Wu et al. *Difix3D+: Improving 3D Reconstructions with Single-Step Diffusion Models*. CVPR, 2025.
+
+- **Datasets**
+  - Sun et al. *Scalability in Perception for Autonomous Driving: Waymo Open Dataset*. CVPR, 2020.
+  - Ling et al. *DL3DV-10K: A Large-Scale Scene Dataset for Deep Learning-Based 3D Vision*. CVPR, 2024.
+  - Zhou et al. *Stereo Magnification: Learning View Synthesis using Multiplane Images*. 2018.
