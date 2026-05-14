@@ -308,6 +308,21 @@ For more specific reproduction instructions, please refer to the `README.md` fil
 
 ---
 
+## Acknowledgements
+
+Our work is built upon the following projects:
+
+- [S3PO-GS](https://github.com/3DAgentWorld/S3PO-GS)
+- [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting)
+- [VGGT](https://github.com/facebookresearch/vggt)
+- [Wavelet-GS](https://github.com/ALEX5874/Wavelet-GS)
+- [Difix3D+](https://github.com/nv-tlabs/Difix3D)
+- [gsplat](https://github.com/nerfstudio-project/gsplat)
+
+This project was completed for the AIAA 3201 Introduction to Computer Vision Final Project 4, Spring 2026.
+
+---
+
 ## References
 
 - **COLMAP / SfM**
@@ -339,3 +354,10 @@ For more specific reproduction instructions, please refer to the `README.md` fil
   - Sun et al. *Scalability in Perception for Autonomous Driving: Waymo Open Dataset*. CVPR, 2020.
   - Ling et al. *DL3DV-10K: A Large-Scale Scene Dataset for Deep Learning-Based 3D Vision*. CVPR, 2024.
   - Zhou et al. *Stereo Magnification: Learning View Synthesis using Multiplane Images*. 2018.
+
+- **Additional Related References**
+  - Barron et al. *Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields*. CVPR, 2022.
+  - Knapitsch et al. *Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction*. TOG, 2017.
+  - Ye et al. *NoPoSplat: Feed-forward 3D Gaussian Splatting from Unposed Images*. 2024.
+  - Xu et al. *AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views*. 2025.
+  - Xing et al. *DynamiCrafter: Animating Open-domain Images with Video Diffusion Priors*. ECCV, 2024.
